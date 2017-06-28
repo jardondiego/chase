@@ -1,0 +1,45 @@
+*, *::after, *::after{
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html{
+	font-size: 16px;
+}
+
+.container{
+	background: #eee;
+	height: 100vh;
+	padding-top: 2rem; 
+	
+	text-align: center;
+}
+
+.unselectable{
+	user-select: none;
+}
+
+.title{
+	font-family: 'Indie Flower', sans-serif;
+	font-size: 3rem;
+}
+
+.description{
+	font-family: 'Indie Flower', cursive;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+.game{	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#box{
+	background: #000;
+	height: 3rem;
+	width: 3rem;
+	margin: 4rem;
+	transition: transform 1s;
+} 
