@@ -27,5 +27,9 @@ window.onload = () => {
 		box.style.left = `${Math.floor(Math.random()*maximumMovementRange.left)*direction}px`;
 	}
 	box.addEventListener('mouseover', moveRand)
-	box.addEventListener('dblclick', () => gamesWon++);
+	box.addEventListener('dblclick', () => {
+		box.style.top = 0+"px";
+		box.style.left = 0+"px";
+		alert("You've won!")
+	});
 }
