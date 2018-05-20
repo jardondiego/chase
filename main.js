@@ -1,10 +1,12 @@
 const unit = "px";
-const unitFactorToPixel = 1;
+const box = document.getElementById('box');
+let gamesWon = 0;
+
 
 window.onload = () => {
-	
-	let box = document.getElementById('box');
+
 	box.style.top = 0; box.style.left = 0;
+
 	let moveRand = () => {
 		
 		let maximumMovementRange = {
@@ -23,13 +25,22 @@ window.onload = () => {
 		};
 
 		let direction = (Math.floor(Math.random()*10) >= 5) ? 1 : -1;
-		box.style.top = `${Math.floor(Math.random()*maximumMovementRange.top)*direction}px`;
-		box.style.left = `${Math.floor(Math.random()*maximumMovementRange.left)*direction}px`;
+		box.style.top = `${Math.floor(Math.random()*maximumMovementRange.top)*direction+unit}`;
+		box.style.left = `${Math.floor(Math.random()*maximumMovementRange.left)*direction+unit}`;
 	}
+
 	box.addEventListener('mouseover', moveRand)
-	box.addEventListener('dblclick', () => {
+	box.addEventListener('click', () => {
+		// Reset box initial position
 		box.style.top = 0+"px";
 		box.style.left = 0+"px";
-		alert("You've won!")
+
+		gamesWon++;
+		let gamesWonCounter = document.querySelector("#gamesWon");
+		
+		if (gamesWonCounter) {
+			gamesWonCounter.removeChild(gamesWonCounter.firstChild);
+			gamesWonCounter.innerHTML = gamesWon;
+		}
 	});
 }

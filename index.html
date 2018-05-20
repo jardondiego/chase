@@ -4,13 +4,18 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Try to touch me!</title>
 </head>
 <body>
 	<div class="container">
 		<div class="about">
-			<h2 class="title unselectable">Try to double-click the box!</h2>
-			<p class="description unselectable">Do you have what's necessary? Only 0.000001% of players have achieved it! 😛</p>
+			<h2 class="title unselectable">Can you do it?</h2>
+			<p class="description unselectable">Try to touch/click the little box below to win! Only 0.05% of people can 😛</p>
+			<div id="gamesWonContainer">
+				<h3 class="unselectable">Games won:</h3>
+				<span id="gamesWon" class="unselectable">0</span>
+			</div>
 		</div>
 		<div class="game">
 			<div id="box"></div>

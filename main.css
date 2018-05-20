@@ -7,6 +7,12 @@ html{
 	font-size: 16px;
 }
 
+body {
+	font-family: 'Indie Flower';
+	padding: 0;
+	margin: 0;
+}
+
 .container{
 	background: #eee;
 	height: 100vh;
@@ -42,8 +48,16 @@ html{
 	height: 3rem;
 	width: 3rem;
 	margin: 4rem;
-	transition: all 0.5s linear;
+	transition: all 0.75s linear;
 	position: relative;
 	top: 0;
 	left: 0;
 } 
+
+#gamesWon {
+	font-size: 2em;
+}
+
+#gamesWonContainer {
+	margin-top: 1em;
+}
