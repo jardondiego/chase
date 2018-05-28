@@ -1,2 +1,3 @@
-# try-to-touch
-Try to touch me game using JavaScript!
+# TTT Game
+
+Try to touch the box! The new Flappy Bird, I guess.
