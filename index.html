@@ -10,8 +10,15 @@
 <body>
 	<div class="container">
 		<div class="about">
-			<h2 class="title unselectable">Can you do it?</h2>
-			<p class="description unselectable">Try to touch/click the little box below to win! Only 0.05% of people can 😛</p>
+			<h2 class="title unselectable"></h2>
+			<p class="description unselectable">If you win at least once, you're free, go away.</p>
+			<label for="difficulty" class="unselectable"><b>Select difficulty:</b>
+				<select name="difficulty" id="difficulty" class="unselectable">
+					<option value="1">Easy</option>
+					<option value="2">Medium</option>
+					<option value="3">Hard</option>
+				</select>
+			</label>
 			<div id="gamesWonContainer">
 				<h3 class="unselectable">Games won:</h3>
 				<span id="gamesWon" class="unselectable">0</span>
@@ -19,6 +26,9 @@
 		</div>
 		<div class="game">
 			<div id="box"></div>
+		</div>
+		<div class="copyright unselectable">
+			<span>Created by <a href="https://www.twitter.com/diegojardonc">@diegojardonc</a></span>
 		</div>
 	</div>
 	<script type="text/javascript" src="main.js"></script>

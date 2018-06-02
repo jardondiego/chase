@@ -49,6 +49,7 @@ body {
 	width: 3rem;
 	margin: 4rem;
 	transition: all 0.75s linear;
+	border-radius: 0.25em;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -60,4 +61,8 @@ body {
 
 #gamesWonContainer {
 	margin-top: 1em;
+}
+
+.copyright {
+	font-size: 1.25em;
 }

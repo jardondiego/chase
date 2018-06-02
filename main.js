@@ -1,7 +1,8 @@
-const unit = "px";
 const box = document.getElementById('box');
+const gamesWonCounter = document.querySelector("#gamesWon");
+const difficultySelect = document.getElementById("difficulty");
+const unit = "px";
 let gamesWon = 0;
-
 
 window.onload = () => {
 
@@ -29,18 +30,18 @@ window.onload = () => {
 		box.style.left = `${Math.floor(Math.random()*maximumMovementRange.left)*direction+unit}`;
 	}
 
+	difficultySelect.addEventListener("change", function (e) {
+		box.style.transition = `all ${0.75/parseInt(e.target.value)}s linear`;
+	});
 	box.addEventListener('mouseover', moveRand)
 	box.addEventListener('click', () => {
+		alert("You've won!");
+
 		// Reset box initial position
 		box.style.top = 0+"px";
 		box.style.left = 0+"px";
 
 		gamesWon++;
-		let gamesWonCounter = document.querySelector("#gamesWon");
-		
-		if (gamesWonCounter) {
-			gamesWonCounter.removeChild(gamesWonCounter.firstChild);
-			gamesWonCounter.innerHTML = gamesWon;
-		}
+		gamesWonCounter.innerHTML = gamesWon++;
 	});
 }
