@@ -42,6 +42,6 @@ window.onload = () => {
 		box.style.left = 0+"px";
 
 		gamesWon++;
-		gamesWonCounter.innerHTML = gamesWon++;
+		gamesWonCounter.innerHTML = gamesWon;
 	});
 }
