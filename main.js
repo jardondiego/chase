@@ -28,6 +28,7 @@ window.onload = () => {
 		let direction = (Math.floor(Math.random()*10) >= 5) ? 1 : -1;
 		box.style.top = `${Math.floor(Math.random()*maximumMovementRange.top)*direction+unit}`;
 		box.style.left = `${Math.floor(Math.random()*maximumMovementRange.left)*direction+unit}`;
+		box.style.backgroundColor = `hsl(${Math.floor(Math.random()*360)}, 100%, 50%)`;
 	}
 
 	difficultySelect.addEventListener("change", function (e) {
@@ -40,6 +41,7 @@ window.onload = () => {
 		// Reset box initial position
 		box.style.top = 0+"px";
 		box.style.left = 0+"px";
+		box.style.backgroundColor = "black";
 
 		gamesWon++;
 		gamesWonCounter.innerHTML = gamesWon;
