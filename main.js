@@ -47,3 +47,9 @@ window.onload = () => {
 		gamesWonCounter.innerHTML = gamesWon;
 	});
 }
+
+window.onresize = function () {
+	box.style.left = 0+"px";
+	box.style.top = 0+"px";
+	box.style.backgroundColor = "black";
+}
