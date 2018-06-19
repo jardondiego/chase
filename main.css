@@ -8,7 +8,7 @@ html{
 }
 
 body {
-	font-family: 'Indie Flower';
+	font-family: 'Indie Flower', sans-serif;
 	padding: 0;
 	margin: 0;
 }
@@ -16,13 +16,16 @@ body {
 .container{
 	background: #eee;
 	height: 100vh;
-	padding-top: 2rem; 
-	
+
 	text-align: center;
-	overflow: hidden;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+	flex-wrap: wrap;
 }
 
-.unselectable{
+.unselectable {
 	user-select: none;
 }
 
@@ -31,38 +34,34 @@ body {
 	font-size: 3rem;
 }
 
-.description{
-	font-family: 'Indie Flower', cursive;
-	font-weight: 700;
-	font-size: 1.5rem;
+.menu {
+
 }
 
 .game{	
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 }
 
-#box{
+#box {
 	background: #000;
 	height: 3rem;
 	width: 3rem;
 	margin: 4rem;
 	transition: all 0.75s linear;
-	border-radius: 0.25em;
+	border-radius: 0.25rem;
 	position: relative;
 	top: 0;
 	left: 0;
 } 
 
-#gamesWon {
-	font-size: 2em;
-}
-
 #gamesWonContainer {
-	margin-top: 1em;
+	margin-top: 0.5rem;
 }
 
-.copyright {
-	font-size: 1.25em;
+#gamesWon {
+	font-size: 2rem;
+	font-weight: bold;
 }
