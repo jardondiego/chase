@@ -1,16 +1,22 @@
 const box = document.getElementById('box');
-const gamesWonCounter = document.getElementById('gamesWon')
+const gamesWonCounter = document.getElementById('gamesWon');
 const difficultySelect = document.getElementById('difficulty');
+const winScreen = document.getElementById('winScreen');
+const closeWinScreen = document.getElementById('closeWinScreen');
 const unit = 'px';
 
 let touchMode = false;
 let gamesWon = 0;
 
+function showWinScreen () {
+	winScreen.classList.toggle('is-hidden');
+}
+
 // Resets box initial state
 function reset () {
-	box.style.left = '0px'
-	box.style.top = '0px'
-	box.style.backgroundColor = 'black'
+	box.style.left = '0px';
+	box.style.top = '0px';
+	box.style.backgroundColor = 'black';
 }
 
 function moveRandom (el) {
@@ -40,7 +46,7 @@ function moveRandom (el) {
 window.onload = () => {
 	// On touch devices, just start moving randomly
 	if (touchMode) {
-		let pid = setInterval(moveRand, (0.75/4)*1000)
+		let pid = setInterval(moveRand, (0.75/4)*1000);
 	}
 
 	difficultySelect.addEventListener('change', function (e) {
@@ -48,19 +54,23 @@ window.onload = () => {
 	})
 
 	box.addEventListener('mouseover', () => {
-		moveRandom(box)
+		moveRandom(box);
 	})
 
 	box.addEventListener('click', () => {
 		// Win Screen
-		alert("You've won!");
+		showWinScreen();
 
 		// Reset box state and update win counter
-		reset()
+		reset();
 		gamesWon++;
 		gamesWonCounter.innerText = gamesWon;
 	});
 
 }
 
-window.onresize = reset
+closeWinScreen.addEventListener('click', function () {
+	winScreen.classList.toggle('is-hidden')
+});
+
+window.onresize = reset;
